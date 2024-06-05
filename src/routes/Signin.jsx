@@ -5,7 +5,7 @@ export const Signin = () => {
   return (
     <div>
       <div>
-        <SignIn/>
+      <SignIn/>
       </div>
     </div>
   )

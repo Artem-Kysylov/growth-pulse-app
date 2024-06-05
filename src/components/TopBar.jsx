@@ -5,7 +5,7 @@ export const TopBar = () => {
   return (
     <div>
       <h3>dashboard</h3>
-      <UserButton/>
+      <UserButton afterSignOutUrl='/signin'/>
     </div>
   )
 }
