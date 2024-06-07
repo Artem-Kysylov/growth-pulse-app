@@ -17,9 +17,9 @@ import { NotFound } from './routes/NotFound.jsx'
 const Layout = () => {
   return (
     <SignedIn>
-    <div>
+    <div className='flex'>
       <SideBar/>
-      <div>
+      <div className='w-full'>
         <TopBar/>
         <Outlet/>
       </div>
