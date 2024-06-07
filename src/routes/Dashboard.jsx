@@ -1,7 +1,10 @@
+// Imports 
 import React from 'react'
 
 export const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div className='w-full h-full bg-bg'>
+      Dashboard
+    </div>
   )
 }
