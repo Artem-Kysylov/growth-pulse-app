@@ -12,6 +12,7 @@ export default {
       text: '#3B433F',
       primary: '#40A578',
       primaryHover: '#2D7454',
+      transparentBlack: 'rgba(59, 67, 63, 0.5)',
     },
     extend: {},
   },
