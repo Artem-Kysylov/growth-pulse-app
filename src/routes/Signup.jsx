@@ -20,7 +20,9 @@ export const Signup = () => {
         </div>
       </div>
       <div className='flex items-center justify-center flex-1 h-screen overflow-y-scroll'>
-        <SignUp/>
+        <SignUp
+          signInUrl='/signin'
+        />
       </div>
   </div>
   )

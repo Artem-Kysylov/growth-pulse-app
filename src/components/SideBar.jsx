@@ -17,26 +17,31 @@ const navData = [
     id: 1,
     title: 'Dashboard',
     icon: BsBarChartLineFill,
+    path: '/',
   },
   {
     id: 2,
     title: 'Users',
     icon: HiUsers,
+    path: '/users',
   },
   {
     id: 3,
     title: 'Kanban',
     icon: BiSolidDashboard,
+    path: '/kanban',
   },
   {
     id: 4,
     title: 'Calendar',
     icon: FaCalendarDays,
+    path: '/calendar',
   },
   {
     id: 5,
     title: 'FAQ',
     icon: BsFillQuestionCircleFill,
+    path: '/faq',
   },
 ]
 
@@ -54,6 +59,7 @@ export const SideBar = () => {
                 key={item.id}
                 icon={item.icon}
                 title={item.title}
+                path={item.path}
               />
             ))
           }

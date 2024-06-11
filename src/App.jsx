@@ -12,6 +12,9 @@ import { Signin } from './routes/Signin.jsx'
 import { Signup } from './routes/Signup.jsx'
 import { Dashboard } from './routes/Dashboard.jsx'
 import { Users } from './routes/Users.jsx'
+import { Calendar } from './routes/Calendar.jsx'
+import { Kanban } from './routes/Kanban.jsx'
+import { Faq } from './routes/Faq.jsx'
 import { NotFound } from './routes/NotFound.jsx'
 
 const Layout = () => {
@@ -40,6 +43,18 @@ const router = createBrowserRouter([
       {
         path: '/users',
         element: <Users/>
+      },
+      {
+        path: '/kanban',
+        element: <Kanban/>
+      },
+      {
+        path: '/calendar',
+        element: <Calendar/>
+      },
+      {
+        path: '/faq',
+        element: <Faq/>
       },
     ]
   },
