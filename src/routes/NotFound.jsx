@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 // Import components 
-import { Button } from '../components/ui/Button.jsx'
+import { Button } from '../components/Button.jsx'
 
 export const NotFound = () => {
   const navigate = useNavigate()

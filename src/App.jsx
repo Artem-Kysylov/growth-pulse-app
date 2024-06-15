@@ -22,7 +22,7 @@ const Layout = () => {
     <SignedIn>
     <div className='flex'>
       <SideBar/>
-      <div className='w-full'>
+      <div className='w-full overflow-y-scroll'>
         <TopBar/>
         <Outlet/>
       </div>

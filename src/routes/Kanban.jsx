@@ -2,6 +2,8 @@ import React from 'react'
 
 export const Kanban = () => {
   return (
-    <div>Kanban</div>
+    <div className='w-full h-full bg-bg p-[20px]'>
+
+    </div>
   )
 }

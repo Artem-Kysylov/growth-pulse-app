@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.2.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@headlessui/react": "^2.0.4",
     "@headlessui/tailwindcss": "^0.2.1",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "@remixicon/react": "^4.2.0",
     "@tremor/react": "^3.17.2",
     "react": "^18.2.0",

@@ -1,12 +1,12 @@
 // Imports 
 import React from 'react'
-import { AreaChart } from '@tremor/react'
+
+// Import conponents 
 
 export const Dashboard = () => {
   return (
-    <div className='grid grid-cols-2 gap-5 w-full h-full bg-bg overflow-y-scroll'>
+    <div className='grid grid-cols-2 gap-5 w-full h-full bg-bg p-[20px]'>
       <div className='flex flex-col gap-5'>
-        <AreaChart/>
       </div>
 
       <div className='flex flex-col gap-5'></div>

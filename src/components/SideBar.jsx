@@ -8,7 +8,7 @@ import { BsFillQuestionCircleFill } from "react-icons/bs"
 
 // Import components 
 import LightLogo from '../assets/logo/light-logo.svg'
-import { ToggleTheme } from './ui/ToggleTheme'
+import { ToggleTheme } from './ToggleTheme'
 import { NavItem } from './NavItem'
 
 // Navdata 
