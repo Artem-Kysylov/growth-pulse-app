@@ -8,26 +8,8 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 
-function createData(userName, id, date, position, email) {
-  return { userName, id, date, position, email };
-}
 
-const rows = [
-  createData('John Smith', 1, '22.05.24', 'Manager', 'john.smith@mail.com'),
-  createData('Alice Johnson', 2, '23.06.25', 'Developer', 'alice.johnson@mail.com'),
-  createData('Michael Brown', 3, '24.07.26', 'Designer', 'michael.brown@mail.com'),
-  createData('Emma Wilson', 4, '25.08.27', 'Analyst', 'emma.wilson@mail.com'),
-  createData('Olivia Davis', 5, '26.09.28', 'Engineer', 'olivia.davis@mail.com'),
-  createData('Noah Miller', 6, '27.10.29', 'Consultant', 'noah.miller@mail.com'),
-  createData('Liam Martinez', 7, '28.11.30', 'Product Manager', 'liam.martinez@mail.com'),
-  createData('Sophia Anderson', 8, '29.12.31', 'Marketing', 'sophia.anderson@mail.com'),
-  createData('Isabella Thomas', 9, '30.01.32', 'HR', 'isabella.thomas@mail.com'),
-  createData('Mason Lee', 10, '31.02.33', 'Sales', 'mason.lee@mail.com'),
-  createData('Ethan Taylor', 11, '01.03.34', 'Support', 'ethan.taylor@mail.com'),
-]
-
-
-export const UsersTable = () => {
+export const UsersTable = ({data}) => {
   return (
     <TableContainer 
       component={Paper}
@@ -39,25 +21,31 @@ export const UsersTable = () => {
             <TableCell
               sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
             >
-              Name
+              ID
             </TableCell>
             <TableCell 
-              align="right"
+              align="center"
               sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
               >
-                ID
+                First Name
             </TableCell>
             <TableCell 
-              align="right"
+              align="center"
               sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
               >
-                Date
+                Last Name
             </TableCell>
             <TableCell 
-              align="right"
+              align="center"
               sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
               >
                 Position
+            </TableCell>
+            <TableCell 
+              align="center"
+              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              >
+                Country Code
             </TableCell>
             <TableCell 
               align="right"
@@ -68,40 +56,46 @@ export const UsersTable = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {data.map((item) => (
             <TableRow
-              key={row.userName}
+              key={item.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell 
                 component="th" scope="row"
                 sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
               >
-                {row.userName}
+                {item.id}
+              </TableCell>
+              <TableCell 
+                align="center"
+                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+              >
+                {item.first_name}
+              </TableCell>
+              <TableCell 
+                align="center"
+                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+              >
+                {item.last_name}
+              </TableCell>
+              <TableCell 
+                align="center"
+                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+              >
+                {item.position}
+              </TableCell>
+              <TableCell 
+                align="center"
+                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+              >
+                {item.country_code}
               </TableCell>
               <TableCell 
                 align="right"
                 sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
               >
-                {row.id}
-              </TableCell>
-              <TableCell 
-                align="right"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
-              >
-                {row.date}
-              </TableCell>
-              <TableCell 
-                align="right"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
-              >
-                {row.position}
-              </TableCell>
-              <TableCell 
-                align="right"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
-              >
-                {row.email}
+                {item.email}
               </TableCell>
             </TableRow>
           ))}
