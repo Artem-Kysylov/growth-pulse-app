@@ -2,12 +2,8 @@
 import React from 'react'
 import { IoIosSearch } from "react-icons/io"
 
-// Import components 
-import { Button } from '../components/Button'
-
 export const SearchInput = (props) => {
   return (
-    <div className='flex items-center gap-[20px] w-full'>
         <div className='flex item-center gap-[8px] p-[10px] rounded border border-grey bg-white w-full'>
             <IoIosSearch 
                 style={{
@@ -23,13 +19,5 @@ export const SearchInput = (props) => {
                 {...props}  
             />
         </div>
-        <Button
-            text='Search'
-            style={{
-                padding: '11px',
-                color: '#fff'
-            }}
-        />
-    </div>
   )
 }

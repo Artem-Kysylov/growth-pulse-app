@@ -20,11 +20,13 @@ import { NotFound } from './routes/NotFound.jsx'
 const Layout = () => {
   return (
     <SignedIn>
-    <div className='flex'>
+    <div className='flex h-screen'>
       <SideBar/>
-      <div className='w-full'>
+      <div className='flex flex-col w-full h-full'>
         <TopBar/>
-        <Outlet/>
+        <div className='flex-1 overflow-y-auto'>
+            <Outlet/>
+        </div>
       </div>
     </div>
     </SignedIn>

@@ -1,5 +1,5 @@
 // Imports 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { tableData } from '../data'
 
 // Import components 
@@ -10,16 +10,19 @@ export const Users = () => {
   const [search, setSearch] = useState('')
   const [searchNotFound, setSearchNotFound] = useState(false)
 
-  const userSearch = tableData.filter((user) => {
-    const firstName = user.first_name.toLowerCase()
-    const lastName = user.last_name.toLowerCase()
+  useEffect(() => {
     const searchQuery = search.trim().toLowerCase()
-  
-    if(!searchQuery) {
-      return true
-    }
-  })
-
+    const filteredUsers = tableData.filter((item) => {
+      return (
+        item.first_name.toLowerCase().includes(searchQuery) ||
+        item.last_name.toLowerCase().includes(searchQuery) ||
+        item.position.toLowerCase().includes(searchQuery) ||
+        item.country_code.toLowerCase().includes(searchQuery) ||
+        item.email.toLowerCase().includes(searchQuery)
+      )
+    })
+    setSearchNotFound(filteredUsers.length === 0 && search.trim() !== '')
+}, [search])
 
   return (
     <div className='w-full h-full bg-bg p-[20px]'>
@@ -30,7 +33,14 @@ export const Users = () => {
       </div>
       <UsersTable
         data={tableData}
+        search={search}
       />
+      {
+        searchNotFound && 
+        <div className='text-center mt-4 text-text'>
+          Search not found...
+        </div>
+      }
     </div>
   )
 }

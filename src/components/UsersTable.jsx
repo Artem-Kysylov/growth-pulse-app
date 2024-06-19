@@ -9,7 +9,19 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 
 
-export const UsersTable = ({data}) => {
+export const UsersTable = ({ data, search }) => {
+
+  const filteredData = data.filter((item) => {
+    const searchQuery = search.toLowerCase();
+    return (
+      item.first_name.toLowerCase().includes(searchQuery) ||
+      item.last_name.toLowerCase().includes(searchQuery) ||
+      item.position.toLowerCase().includes(searchQuery) ||
+      item.country_code.toLowerCase().includes(searchQuery) ||
+      item.email.toLowerCase().includes(searchQuery)
+    )
+  })
+
   return (
     <TableContainer 
       component={Paper}
@@ -56,7 +68,7 @@ export const UsersTable = ({data}) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((item) => (
+          {filteredData.map((item) => (
             <TableRow
               key={item.id}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
