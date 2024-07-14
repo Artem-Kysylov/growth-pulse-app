@@ -6,7 +6,7 @@ import { CalendarItem } from '../components/CalendarItem'
 
 export const Calendar = () => {
   return (
-    <div className='w-full h-full bg-bg p-[20px]'>
+    <div className='w-full h-full p-[20px]'>
       <CalendarItem/>
     </div>
   )

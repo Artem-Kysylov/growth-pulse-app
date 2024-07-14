@@ -6,7 +6,7 @@ import { AccordionItem } from '../components/AccordionItem'
 
 export const Faq = () => {
   return (
-    <div className='w-full h-full bg-bg p-[20px]'>
+    <div className='w-full h-full p-[20px]'>
       <AccordionItem/>
     </div>
   )

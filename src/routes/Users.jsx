@@ -25,7 +25,7 @@ export const Users = () => {
 }, [search])
 
   return (
-    <div className='w-full h-full bg-bg p-[20px]'>
+    <div className='w-full h-full p-[20px]'>
       <div className='mb-[20px]'>
         <SearchInput
           onChange={(e) => setSearch(e.target.value)}

@@ -2,9 +2,9 @@
 import React from 'react'
 import { BsBarChartLineFill } from "react-icons/bs"
 import { HiUsers } from "react-icons/hi2"
-import { BiSolidDashboard } from "react-icons/bi"
 import { FaCalendarDays } from "react-icons/fa6"
 import { BsFillQuestionCircleFill } from "react-icons/bs"
+import { FaUserShield } from "react-icons/fa"
 
 // Import components 
 import LightLogo from '../assets/logo/light-logo.svg'
@@ -27,9 +27,9 @@ const navData = [
   },
   {
     id: 3,
-    title: 'Kanban',
-    icon: BiSolidDashboard,
-    path: '/kanban',
+    title: 'Clients',
+    icon: FaUserShield,
+    path: '/clients',
   },
   {
     id: 4,

@@ -13,7 +13,7 @@ import { Signup } from './routes/Signup.jsx'
 import { Dashboard } from './routes/Dashboard.jsx'
 import { Users } from './routes/Users.jsx'
 import { Calendar } from './routes/Calendar.jsx'
-import { Kanban } from './routes/Kanban.jsx'
+import { Clients } from './routes/Clients.jsx'
 import { Faq } from './routes/Faq.jsx'
 import { NotFound } from './routes/NotFound.jsx'
 
@@ -24,7 +24,7 @@ const Layout = () => {
       <SideBar/>
       <div className='flex flex-col w-full h-full'>
         <TopBar/>
-        <div className='flex-1 overflow-y-auto'>
+        <div className='flex-1 bg-bg overflow-y-auto'>
             <Outlet/>
         </div>
       </div>
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
         element: <Users/>
       },
       {
-        path: '/kanban',
-        element: <Kanban/>
+        path: '/clients',
+        element: <Clients/>
       },
       {
         path: '/calendar',
