@@ -10,7 +10,7 @@ export const NavItem = ({ icon: Icon, title, path }) => {
     }
     >
       {({ isActive }) => (
-        <div className={`relative transition ease-in-out duration-500 flex items-center gap-[8px] w-[150px] p-[10px] cursor-pointer hover:bg-primary hover:w-[150px] hover:rounded-[5px] group ${isActive ? 'text-primary' : ''}`}>
+        <div className={`relative transition ease-in-out duration-500 flex items-center gap-[8px] w-[150px] rounded-[5px] p-[10px] cursor-pointer hover:bg-primary hover:w-[150px] hover:rounded-[5px] group ${isActive ? 'text-primary' : ''}`}>
           <Icon className={`transition ease-in-out duration-500 ${isActive ? 'text-primary' : 'text-transparentBlack'} group-hover:text-white`} />
           <p className={`transition ease-in-out duration-500 text-[14px] font-medium ${isActive ? 'text-primary' : 'text-transparentBlack'} group-hover:text-white`}>{title}</p>
           {isActive && <div className="absolute right-0 h-[24px] w-[3px] rounded bg-primary"></div>}
