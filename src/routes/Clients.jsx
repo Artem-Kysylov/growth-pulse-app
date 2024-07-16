@@ -1,6 +1,6 @@
 // Imports 
 import React, { useState } from 'react'
-import { clientsData } from '../data'
+import { clientsData } from '../data/clientsData'
 import * as XLSX from 'xlsx';
 
 // Import components 

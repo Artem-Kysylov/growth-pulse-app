@@ -1,6 +1,6 @@
 // Imports 
 import React, { useState, useEffect } from 'react'
-import { tableData } from '../data'
+import { usersData } from '../data/usersData'
 
 // Import components 
 import { UsersTable } from '../components/UsersTable'
@@ -12,7 +12,7 @@ export const Users = () => {
 
   useEffect(() => {
     const searchQuery = search.trim().toLowerCase()
-    const filteredUsers = tableData.filter((item) => {
+    const filteredUsers = usersData.filter((item) => {
       return (
         item.first_name.toLowerCase().includes(searchQuery) ||
         item.last_name.toLowerCase().includes(searchQuery) ||
@@ -32,7 +32,7 @@ export const Users = () => {
         />
       </div>
       <UsersTable
-        data={tableData}
+        data={usersData}
         search={search}
       />
       {
