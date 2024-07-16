@@ -20,15 +20,15 @@ import { NotFound } from './routes/NotFound.jsx'
 const Layout = () => {
   return (
     <SignedIn>
-    <div className='flex h-screen'>
-      <SideBar/>
-      <div className='flex flex-col w-full h-full'>
-        <TopBar/>
-        <div className='flex-1 bg-bg overflow-y-auto'>
-            <Outlet/>
+      <div className='flex h-screen'>
+        <SideBar/>
+        <div className='flex flex-col w-full h-full'>
+          <TopBar/>
+          <div className='flex-1 bg-bg overflow-y-auto'>
+              <Outlet/>
+          </div>
         </div>
       </div>
-    </div>
     </SignedIn>
   )
 }

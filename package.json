@@ -23,6 +23,7 @@
     "@headlessui/tailwindcss": "^0.2.1",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
+    "@mui/x-charts": "^7.10.0",
     "@mui/x-data-grid": "^7.10.0",
     "@remixicon/react": "^4.2.0",
     "@tremor/react": "^3.17.2",

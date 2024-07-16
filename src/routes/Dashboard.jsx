@@ -1,15 +1,24 @@
 // Imports 
 import React from 'react'
 
-// Import conponents 
+// Import conponents
+import { BarChartItem } from '../components/BarChartItem'
+import { PieChartItem } from '../components/PieChartItem'
+import { AreaChartItem } from '../components/AreaChartItem'
+import { BarsHorizontalItem } from '../components/BarsHorizontalItem' 
 
 export const Dashboard = () => {
   return (
-    <div className='grid grid-cols-2 gap-5 w-full h-full bg-bg p-[20px]'>
-      <div className='flex flex-col gap-5'>
+    <div className='flex flex-col gap-5 w-full h-full p-[20px]'>
+      <div className='flex items-center gap-5'>
+        <AreaChartItem/>
+        <BarsHorizontalItem/>
       </div>
 
-      <div className='flex flex-col gap-5'></div>
+      <div className='flex items-center gap-5'>
+        <BarChartItem/>
+        <PieChartItem/>
+      </div>
     </div>
   )
 }
