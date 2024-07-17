@@ -6,7 +6,7 @@ export const BarChartItem = () => {
   return (
     <div className='bg-white p-3 rounded-md'>
         <BarChart
-            xAxis={[{ scaleType: 'band', data: ['group A', 'group B', 'group C'] }]}
+            xAxis={[{ scaleType: 'band', data: ['USA ', 'France', 'Germany'] }]}
             series={[
               { data: [4, 3, 5], color: '#2B7BBE', }, 
               { data: [1, 6, 3], color: '#40A578', }, 

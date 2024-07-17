@@ -3,7 +3,6 @@ import React from 'react'
 import { BarChart } from '@mui/x-charts/BarChart'
 import { dataset } from '../data/dataset'
 
-
 const valueFormatter = (value) => `$${value}`
 
 export const BarsHorizontalItem = () => {
