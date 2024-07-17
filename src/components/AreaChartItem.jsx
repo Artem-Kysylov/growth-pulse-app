@@ -11,10 +11,11 @@ export const AreaChartItem = () => {
                 {
                 data: [2, 5.5, 2, 8.5, 1.5, 5],
                 area: true,
+                color: '#40A578',
                 },
             ]}
             width={500}
-            height={400}
+            height={350}
         />
     </div>
   )

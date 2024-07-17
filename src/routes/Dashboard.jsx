@@ -12,13 +12,10 @@ import { LineChartItem } from '../components/LineChartItem'
 export const Dashboard = () => {
   return (
     <div className='flex flex-col gap-5 w-full h-full p-[20px]'>
-      <div className='flex items-center gap-5'>
+      <div className='flex items-center gap-5 flex-wrap'>
         <AreaChartItem/>
         <BarsHorizontalItem/>
         <LineChartItem/>
-      </div>
-
-      <div className='flex items-center gap-5'>
         <BarChartItem/>
         <PieChartItem/>
         <ScatterItem/>

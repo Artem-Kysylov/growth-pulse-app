@@ -3,17 +3,8 @@ import React from 'react'
 import { BarChart } from '@mui/x-charts/BarChart'
 import { dataset } from '../data/dataset'
 
-const chartSetting = {
-    xAxis: [
-      {
-        label: 'rainfall (mm)',
-      },
-    ],
-    width: 500,
-    height: 400,
-  }
 
-  const valueFormatter = (value) => `${value}mm`
+const valueFormatter = (value) => `$${value}`
 
 export const BarsHorizontalItem = () => {
   return (
@@ -21,9 +12,10 @@ export const BarsHorizontalItem = () => {
         <BarChart
             dataset={dataset}
             yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-            series={[{ dataKey: 'seoul', label: 'Seoul rainfall', valueFormatter }]}
+            series={[{ dataKey: 'london', label: 'Income statistics', valueFormatter, color: '#40A578', }]}
             layout="horizontal"
-            {...chartSetting}
+            width={500}
+            height={350}
         />
     </div>
   )
