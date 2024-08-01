@@ -47,7 +47,7 @@ const navData = [
 
 export const SideBar = () => {
   return (
-    <div className='flex flex-col justify-between py-5 px-3.5 bg-white w-[180px] h-screen'>
+    <div className='w-[70px] flex flex-col justify-between py-5 px-3.5 bg-white tablet:w-[180px] h-screen'>
       <div>
         <div className='flex flex-col items-center border-b border-b-grey mb-[20px]'>
           <img className='mb-2.5' src={LightLogo} alt="logo" />
