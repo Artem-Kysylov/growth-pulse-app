@@ -22,7 +22,7 @@ const Layout = () => {
     <SignedIn>
       <div className='flex h-screen'>
         <SideBar/>
-        <div className='flex flex-col w-full h-full'>
+        <div className='flex flex-col w-full h-full overflow-x-auto'>
           <TopBar/>
           <div className='flex-1 bg-bg overflow-y-auto'>
               <Outlet/>

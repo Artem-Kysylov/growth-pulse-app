@@ -34,8 +34,8 @@ export const CalendarItem = () => {
     }
 
   return (
-    <div className='flex gap-[20px]'>
-        <div className='flex-initial w-52 bg-white rounded-[5px] p-[10px] text-center'>
+    <div className='flex flex-col gap-[20px] laptop:flex-row'>
+        <div className='flex-initial w-full bg-white rounded-[5px] p-[10px] text-center laptop:w-52'>
             <div className='mb-[10px]'>
                 <p className='text-[16px] font-semibold text-text'>Upcoming Events</p>
                 <p className='text-[11px] leading-[110%] text-text'>Click the date and type your event</p>
