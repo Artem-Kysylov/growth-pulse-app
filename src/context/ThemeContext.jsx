@@ -4,7 +4,7 @@ import { light, dark } from '../colors/colors'
 
 export const ThemeContext = createContext()
 
-const getFromLocaleStorage = () => {
+const getFromLocalStorage = () => {
     if(typeof window !== 'undefined') {
         const value = localStorage.getItem('theme')
         return value === 'dark' ? dark : light
@@ -13,7 +13,7 @@ const getFromLocaleStorage = () => {
 }
 
 export const ThemeContextProvider = ({ children }) => {
-    const [theme, setTheme] = useState(getFromLocaleStorage)
+    const [theme, setTheme] = useState(getFromLocalStorage)
 
     const toggleTheme = () => {
         setTheme(theme === light ? dark : light)
@@ -21,7 +21,8 @@ export const ThemeContextProvider = ({ children }) => {
 
     useEffect(() => {
         const themeMode = theme === dark ? 'dark' : 'light'
-        localStorage.setItem('theme', themeMode) 
+        localStorage.setItem('theme', themeMode)
+        document.documentElement.classList.toggle('dark', theme === dark) 
     },[theme])
 
     return (
