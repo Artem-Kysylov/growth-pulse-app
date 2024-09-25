@@ -22,9 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         }
       }}
       >
-      {/* <ThemeContextProvider> */}
+      <ThemeContextProvider>
         <App/>
-      {/* </ThemeContextProvider> */}
+      </ThemeContextProvider>
     </ClerkProvider>
   </React.StrictMode>,
 )

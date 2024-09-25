@@ -13,12 +13,12 @@ export const Dashboard = () => {
   return (
     <div className='flex flex-col gap-5 w-full h-full p-[20px]'>
       <div className='flex items-center gap-5 flex-wrap'>
-        <AreaChartItem/>
+        {/* <AreaChartItem/>
         <BarsHorizontalItem/>
         <LineChartItem/>
         <BarChartItem/>
         <PieChartItem/>
-        <ScatterItem/>
+        <ScatterItem/> */}
       </div>
     </div>
   )
