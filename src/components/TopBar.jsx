@@ -1,8 +1,7 @@
 // Imports 
-import React, { useContext } from 'react'
+import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { UserButton } from '@clerk/clerk-react'
-import { ThemeContext } from '../context/ThemeContext'
 
 const pageTitles = {
   '/': 'Dashboard',
@@ -15,11 +14,10 @@ const pageTitles = {
 export const TopBar = () => {
   const location = useLocation()
   const title = pageTitles[location.pathname] || 'Page'
-  const { theme } = useContext(ThemeContext)
 
   return (
-    <div className={`flex items-center justify-between bg${theme.background} border-b border-b${theme.grey} py-3 px-7 w-full`}>
-      <h3 className={`text-[15] tablet:text-[20px] font-semibold text${theme.text} tracking-wide uppercase`}>{title}</h3>
+    <div className='flex items-center justify-between  py-3 px-7 w-full bg-surface-light dark:bg-surface-dark border-b border-b-grey-light  dark:border-b-grey-dark'>
+      <h3 className='text-[15] tablet:text-[20px] font-semibold tracking-wide uppercase text-text-light dark:text-text-dark'>{title}</h3>
       <UserButton afterSignOutUrl='/signin'/>
     </div>
   )
