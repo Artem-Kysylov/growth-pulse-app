@@ -24,7 +24,7 @@ const Layout = () => {
         <SideBar/>
         <div className='flex flex-col w-full h-full overflow-x-auto'>
           <TopBar/>
-          <div className='flex-1 bg-bg overflow-y-auto'>
+          <div className='flex-1 bg-background-light dark:bg-background-dark overflow-y-auto transition ease-in-out duration-500'>
               <Outlet/>
           </div>
         </div>
