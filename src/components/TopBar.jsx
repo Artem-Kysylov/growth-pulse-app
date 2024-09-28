@@ -16,8 +16,12 @@ export const TopBar = () => {
   const title = pageTitles[location.pathname] || 'Page'
 
   return (
-    <div className='flex items-center justify-between  py-3 px-7 w-full bg-surface-light dark:bg-surface-dark border-b border-b-grey-light dark:border-b-grey-dark transition ease-in-out duration-500'>
-      <h3 className='text-[15] tablet:text-[20px] font-semibold tracking-wide uppercase text-text-light dark:text-text-dark'>{title}</h3>
+    <div className='flex items-center justify-between  py-3 px-7 w-full bg-surface-light dark:bg-surface-dark border-b 
+      border-b-grey-light dark:border-b-grey-dark transition ease-in-out duration-500'
+    >
+      <h3 className='text-[15] tablet:text-[20px] font-semibold tracking-wide uppercase text-text-light
+       dark:text-text-dark transition ease-in-out duration-500'
+      >{title}</h3>
       <UserButton afterSignOutUrl='/signin'/>
     </div>
   )
