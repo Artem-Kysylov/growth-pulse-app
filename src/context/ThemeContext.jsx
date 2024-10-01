@@ -32,7 +32,7 @@ export const ThemeContextProvider = ({ children }) => {
     const customColors = theme === 'dark' ? dark : light
 
     return (
-        <ThemeContext.Provider value={{ theme, toggleTheme, customColors }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme, customColors, muiTheme }}>
             <MuiThemeProvider theme={muiTheme}>
                 {children}
             </MuiThemeProvider>

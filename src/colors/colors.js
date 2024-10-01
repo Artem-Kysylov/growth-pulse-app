@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles'
+
 // Light theme colors
 export const light = {
     green: '#40A578',

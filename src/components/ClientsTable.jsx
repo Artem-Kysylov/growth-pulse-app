@@ -1,5 +1,5 @@
 // Imports 
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -8,9 +8,12 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import Checkbox from '@mui/material/Checkbox'
+import { ThemeContext } from '../context/ThemeContext'
 
 
 export const ClientsTable = ({ data, onSelectedItemsChange }) => {
+    const { muiTheme } = useContext(ThemeContext)
+
     const [checkedItems, setCheckedItems] = useState(data.map(() => false))
     const [isHeaderChecked, setHeaderChecked] = useState(false) 
 
@@ -42,9 +45,9 @@ export const ClientsTable = ({ data, onSelectedItemsChange }) => {
                 <TableRow>
                     <TableCell>
                         <Checkbox
-                            sx={{ color: '#40A578',
+                            sx={{ color: muiTheme.palette.primary.main,
                                 '&.Mui-checked': {
-                                    color: '#40A578',
+                                    color: muiTheme.palette.primary.main,
                                   },
                             }}
                             checked={isHeaderChecked}
@@ -52,37 +55,37 @@ export const ClientsTable = ({ data, onSelectedItemsChange }) => {
                         />
                     </TableCell>
                     <TableCell
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                     >
                         ID
                     </TableCell>
                     <TableCell 
                         align="center"
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                         >
                         First Name
                     </TableCell>
                     <TableCell 
                         align="center"
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                         >
                         Last Name
                     </TableCell>
                     <TableCell 
                         align="center"
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                         >
                         Email
                     </TableCell>
                     <TableCell 
                         align="center"
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                         >
                         Credit Card
                     </TableCell>
                     <TableCell 
                         align="right"
-                        sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+                        sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
                         >
                         IP Address
                     </TableCell>
@@ -96,12 +99,12 @@ export const ClientsTable = ({ data, onSelectedItemsChange }) => {
                     >
                         <TableCell 
                             component="th" scope="row"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             <Checkbox
-                                sx={{ color: '#40A578',
+                                sx={{ color: muiTheme.palette.primary.main,
                                     '&.Mui-checked': {
-                                        color: '#40A578',
+                                        color: muiTheme.palette.primary.main,
                                     },
                                 }}
                                 checked={checkedItems[index]}
@@ -110,37 +113,37 @@ export const ClientsTable = ({ data, onSelectedItemsChange }) => {
                         </TableCell>
                         <TableCell 
                             component="th" scope="row"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.id}
                         </TableCell>
                         <TableCell 
                             align="center"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.first_name}
                         </TableCell>
                         <TableCell 
                             align="center"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.last_name}
                         </TableCell>
                         <TableCell 
                             align="center"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.email}
                         </TableCell>
                         <TableCell 
                             align="center"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.credit_card}
                         </TableCell>
                         <TableCell 
                             align="right"
-                            sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                            sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
                         >
                             {item.ip_address}
                         </TableCell>

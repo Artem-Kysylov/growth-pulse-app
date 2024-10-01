@@ -6,7 +6,6 @@ import { FaCalendarDays } from "react-icons/fa6"
 import { BsFillQuestionCircleFill } from "react-icons/bs"
 import { FaUserShield } from "react-icons/fa"
 import { ThemeContext } from '../context/ThemeContext'
-import { dark } from '../colors/colors'
 
 // Import components 
 import LightLogo from '../assets/logo/light-logo.svg'
@@ -50,7 +49,6 @@ const navData = [
 
 export const SideBar = () => {
   const { theme } = useContext(ThemeContext)
-  const isDarkTheme = theme === dark
 
   return (
     <div className='w-[70px] flex flex-col justify-between py-5 px-3.5 tablet:w-[180px] h-screen 
@@ -58,7 +56,7 @@ export const SideBar = () => {
     >
       <div>
         <div className='flex flex-col items-center border-b mb-[20px] border-b-grey-light dark:border-b-grey-dark'>
-          <img className='mb-2.5' src={isDarkTheme ? DarkLogo : LightLogo} alt="logo"/>          
+          <img className='mb-2.5' src={theme === 'dark' ? DarkLogo : LightLogo} alt="logo"/>          
         </div>
         <nav className='flex flex-col items-start'>
           {
