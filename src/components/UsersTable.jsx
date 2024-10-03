@@ -1,5 +1,5 @@
 // Imports 
-import React from 'react'
+import React, { useContext } from 'react'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -7,9 +7,11 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
+import { ThemeContext } from '../context/ThemeContext'
 
 
 export const UsersTable = ({ data, search }) => {
+  const { muiTheme } = useContext(ThemeContext)
 
   const filteredData = data.filter((item) => {
     const searchQuery = search.toLowerCase();
@@ -31,37 +33,37 @@ export const UsersTable = ({ data, search }) => {
         <TableHead>
           <TableRow>
             <TableCell
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
             >
               ID
             </TableCell>
             <TableCell 
               align="center"
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
               >
                 First Name
             </TableCell>
             <TableCell 
               align="center"
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
               >
                 Last Name
             </TableCell>
             <TableCell 
               align="center"
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
               >
                 Position
             </TableCell>
             <TableCell 
               align="center"
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
               >
                 Country Code
             </TableCell>
             <TableCell 
               align="right"
-              sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 500}}
+              sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 500}}
               >
                 Email
             </TableCell>
@@ -75,37 +77,37 @@ export const UsersTable = ({ data, search }) => {
             >
               <TableCell 
                 component="th" scope="row"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.id}
               </TableCell>
               <TableCell 
                 align="center"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.first_name}
               </TableCell>
               <TableCell 
                 align="center"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.last_name}
               </TableCell>
               <TableCell 
                 align="center"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.position}
               </TableCell>
               <TableCell 
                 align="center"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.country_code}
               </TableCell>
               <TableCell 
                 align="right"
-                sx={{ fontFamily: 'Montserrat', color: '#3B433F', fontSize: '15px', fontWeight: 400}}
+                sx={{ fontFamily: 'Montserrat', color: muiTheme.palette.text.primary, fontSize: '15px', fontWeight: 400}}
               >
                 {item.email}
               </TableCell>

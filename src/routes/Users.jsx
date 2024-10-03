@@ -37,7 +37,7 @@ export const Users = () => {
       />
       {
         searchNotFound && 
-        <div className='text-center mt-4 text-text'>
+        <div className='text-center mt-8 text-text-light dark:text-text-dark'>
           Search not found...
         </div>
       }

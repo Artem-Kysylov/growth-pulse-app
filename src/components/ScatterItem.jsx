@@ -1,12 +1,15 @@
 // Imports 
-import React from 'react'
+import React, { useContext } from 'react'
 import { ScatterChart } from '@mui/x-charts/ScatterChart'
 import { scatterData } from '../data/scatterData'
+import { ThemeContext } from '../context/ThemeContext'
 
 
 export const ScatterItem = () => {
+  const { muiTheme } = useContext(ThemeContext)
+
   return (
-    <div className='bg-white p-3 rounded-md'>
+    <div className='bg-surface-light dark:bg-surface-dark p-3 rounded-md'>
       <ScatterChart
         width={500}
         height={350}
@@ -14,12 +17,12 @@ export const ScatterItem = () => {
           {
             label: '2023',
             data: scatterData.map((v) => ({ x: v.x1, y: v.y1, id: v.id })),
-            color: '#40A578',
+            color: muiTheme.palette.primary.main,
           },
           {
             label: '2024',
             data: scatterData.map((v) => ({ x: v.x1, y: v.y2, id: v.id })),
-            color: '#2B7BBE',
+            color: muiTheme.palette.secondary.main,
           },
         ]}
     />

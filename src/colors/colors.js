@@ -22,7 +22,7 @@ export const dark = {
     hover: '#348561',
     blue: '#3A97E4',
     lightGreen: '#AEEACF',
-    background: '#242424',
+    background: '#161616',
     surface: '#000000',
     text: '#9FB0A8',
     textTransparent: 'rgba(159, 176, 168, 0.5)',
@@ -82,7 +82,7 @@ export const darkTheme = createTheme({
             secondary: 'rgba(159, 176, 168, 0.5)'
         },
         background: {
-            default: '#242424',
+            default: '#161616',
             paper: '#000000',
         },
         grey: {

@@ -14,7 +14,6 @@ export const CalendarItem = () => {
     const [currentEvents, setCurrentEvents] = useState([])
 
     const { theme } = useContext(ThemeContext)
-    const isDarkTheme = theme === dark
 
     const handleDayClick = (selected) => {
         const title = prompt('Please enter a new title for your event')
@@ -33,7 +32,7 @@ export const CalendarItem = () => {
     }
 
     const handleEventClick = (selected) => {
-        if(window.confirm(`Are you sure you want to delete the event '${selected.event.title}'`)){
+        if(window.confirm(`Are you sure you want to delete the event '${selected.event.title}'?`)){
             selected.event.remove()
         }
     }
@@ -72,13 +71,14 @@ export const CalendarItem = () => {
             </ul>
         </div>
 
-        <div className='flex-1 p-3 rounded-md bg-surface-light dark:bg-surface-dark transition ease-in-out duration-500'>
+        <div className='flex-1 p-5 rounded-md bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark transition ease-in-out duration-500'>
             <FullCalendar
                 height='85vh'
                 contentHeight="auto"
                 slotMinTime="07:00:00"
                 slotMaxTime="21:00:00"
-                eventBackgroundColor={isDarkTheme ? dark.green : light.green}
+                eventBackgroundColor={theme === 'dark' ? dark.green : light.green}
+                eventBorderColor={theme === 'dark' ? dark.green : light.green}                
                 plugins={[ 
                     dayGridPlugin,
                     timeGridPlugin,
