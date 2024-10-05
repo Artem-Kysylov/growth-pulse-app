@@ -1,6 +1,6 @@
 // Imports 
 import {createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom'
-import { SignedIn } from "@clerk/clerk-react"
+import { SignedIn, SignedOut } from "@clerk/clerk-react"
 import './index.css'
 
 // Import components 
@@ -17,7 +17,7 @@ import { Clients } from './routes/Clients.jsx'
 import { Faq } from './routes/Faq.jsx'
 import { NotFound } from './routes/NotFound.jsx'
 
-const Layout = () => {
+const AppLayout = () => {
   return (
     <SignedIn>
       <div className='flex h-screen'>
@@ -33,10 +33,18 @@ const Layout = () => {
   )
 }
 
+const AppEntry = () => {
+  return (
+    <SignedOut>
+      <Outlet/>
+    </SignedOut>
+  )
+}
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout/>,
+    element: <AppLayout/>,
     children: [
       {
         path: '/',
@@ -61,12 +69,18 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/signin',
-    element: <Signin/>
-  },
-  {
-    path: '/signup',
-    element: <Signup/>
+    path: '/',
+    element: <AppEntry/>,
+    children: [
+      {
+        path: '/signin',
+        element: <Signin/>
+      },
+      {
+        path: '/signup',
+        element: <Signup/>
+      },
+    ]
   },
   {
     path: '/*',
@@ -78,7 +92,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
     </>
   )
 }
